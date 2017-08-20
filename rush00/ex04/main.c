@@ -47,8 +47,8 @@ void	rush(int x, int y)
 	}
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	rush(5, 5);
+	rush(ft_atoi(argv[1][0]), ft_atoi(argv[1][1]));
 	return (0);
 }
