@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_head.h"
+//#include "ft_head.h"
+int ft_atoi(char *str);
 
 void	print_char(int countx, int county, int x, int y)
 {
@@ -33,8 +34,8 @@ void	rush(int x, int y)
 	int county;
 	int countx;
 
-	if ( x < 1 || y < 1)
-		return ;
+	/*if ( x < 1 || y < 1)
+		return ;*/
 	county = 0;
 	while (++county <= y)
 	{
@@ -49,6 +50,7 @@ void	rush(int x, int y)
 
 int		main(int argc, char **argv)
 {
-	rush(ft_atoi(argv[1][0]), ft_atoi(argv[1][1]));
+	rush(ft_atoi(argv[1]),ft_atoi(argv[2]));
+	//printf("%s\n",argv[] );
 	return (0);
 }

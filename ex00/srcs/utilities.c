@@ -49,3 +49,29 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
+int	ft_atoi(char *str)
+{
+	int res;
+	int i;
+	int n;
+
+	n = 1;
+	res = 0;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\n'
+				|| str[i] == '\r' || str[i] == '\f')
+		i++;
+	if (str[i] == '-')
+	{
+		i++;
+		n = -1;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		res = res * 10 + str[i] - 48;
+		i++;
+	}
+	return (res * n);
+}
